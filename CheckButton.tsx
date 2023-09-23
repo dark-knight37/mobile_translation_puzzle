@@ -4,11 +4,11 @@ import { MaterialIcons } from '@expo/vector-icons';
 
 interface CheckButtonProps {
   status: Number,
-  answer: String,
+  missGerWord: String,
   onPress: () => void;
 }
 
-const CheckButton: React.FC<CheckButtonProps> = ({ status, answer, onPress }) => {
+const CheckButton: React.FC<CheckButtonProps> = ({ status, missGerWord, onPress }) => {
   let color;
   let buttonColor;
   let wordColor;
@@ -37,7 +37,7 @@ const CheckButton: React.FC<CheckButtonProps> = ({ status, answer, onPress }) =>
     buttonColor = 'white';
     wordColor = '#EE838B';
     word = 'CONTINUE';
-    notification = 'Answer: ' + answer;
+    notification = 'Answer: ' + missGerWord;
   }
 
   return (
